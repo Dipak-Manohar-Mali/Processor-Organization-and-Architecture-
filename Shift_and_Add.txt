@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+int i,c,d,a,b;
+clrscr();
+printf("Enter the first No.:-\n");
+scanf("%d",&a);
+printf("\nEnter the Second No.:-\n");
+scanf("%d",&b);
+d=1;
+c=0;
+
+while(b!=0)
+{
+	if((b & '\x01' ==1) || (b & d ==1))
+	   {
+	     c=c+a;
+	   }
+	   a=a<<1;
+	   b=b>>1;
+}
+printf("%d",c);
+
+getch();
+}
